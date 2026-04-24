@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm | OOP E-Portfolio | Alexander Dan E. Cuison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="grid-background"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">OOP_Portfolio</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"   class="nav-link">home()</a></li>
+            <li><a href="midterm.html" class="nav-link active">midterm()</a></li>
+            <li><a href="finals.html"  class="nav-link">finals()</a></li>
+            <li><a href="contact.html" class="nav-link">contact()</a></li>
+        </ul>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+    <h1 class="page-title">&lt; Midterm /&gt;</h1>
+    <p class="page-subtitle">Quizzes · Seatwork · Activities · Assignment · Extra Activity</p>
+</div>
+
+<div class="container" style="padding-bottom: 6rem;">
+
+<!-- ============================================================
+     QUIZZES
+     ============================================================ -->
+<div class="category-block">
+    <div class="category-label">
+        <span class="cat-icon"></span>
+        <h2>Midterm Quizzes</h2>
+        <span class="cat-count">2 items</span>
+    </div>
+
+    <div class="item-list">
+
+        <!-- Quiz #1 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">QUIZ #1</span>
+                    <h4>OOP Fundamentals</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">28/30</span>
+                        </div>
+                        <p class="score-note">Face-to-face assessment — No paper copy available</p>
+                    </div>
+                    <div class="reflection-box">
+                        <h5>🤔 Reflection</h5>
+                        <p>This quiz helped me understand the fundamentals of Java in a clearer and more structured way. It wasn’t just about memorizing what Java is, but actually recognizing why it was created and how it evolved over time. Learning about its history gave me a better appreciation of how programming languages develop to solve real-world problems. The basics of object-oriented programming also started to make more sense, especially concepts like organizing code into methods and understanding how programs are structured. At first, some terms felt overwhelming, but through the quiz, I realized that these concepts are actually connected and build on each other. Overall, this quiz strengthened my foundation in Java and made me more confident in continuing to learn and apply OOP concepts in future activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz #2 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">QUIZ #2</span>
+                    <h4>Comprehensive OOP Assessment (45 Questions)</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+
+                    <div class="score-display" style="margin-bottom:2rem;">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">43/45</span>
+                        </div>
+                        <p class="score-note">Score graded by Canvas</p>
+                    </div>
+
+                    <!-- Search Navigator -->
+                    <div class="question-navigator">
+                        <label for="quiz2-search">🔍 Search Question (1-45):</label>
+                        <div class="search-input-group">
+                            <input type="number" id="quiz2-search" min="1" max="45" placeholder="Enter question number..."
+                                   onkeypress="if(event.key==='Enter') searchQuiz2Question()">
+                            <button class="search-btn" onclick="searchQuiz2Question()">Search</button>
+                        </div>
+                        <p class="search-helper">💡 Type a number (1-45) and press Enter or click Search</p>
+                    </div>
+
+                    <!-- Questions Container -->
+                    <div class="questions-container" id="quiz2-questions-container" style="display:none;">
+
+                        <!-- Q1 -->
+                        <div class="question-item" id="q1">
+                            <div class="question-header" onclick="toggleQuestion(this)">
+                                <span class="question-number">Question 1</span><span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="question-content">
+                                <p class="question-text">Which of the following is a correct method declaration?</p>
+                                <div class="answer-section">
+                                    <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+                                    <div class="answer-content" style="display:none;">
+                                        <p class="answer-text">int add() {}</p>
+                                        <p class="explanation-text"><strong>Explanation:</strong> A valid method needs a return type, name, and parentheses. This follows the correct Java syntax.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="question-item" id="q2">
+                            <div class="question-header" onclick="toggleQuestion(this)">
+                                <span class="question-number">Question 2</span><span class="toggle-icon">▼</span>
+                            </div>
+                            <div class="question-content">
+                                <p class="question-text">What do you call a block of code that performs a specific task in Java?</p>
+                                <div class="answer-section">
+                                    <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+                                    <div class="answer-content" style="display:none;">
+                                        <p class="answer-text">Method</p>
+                                        <p class="explanation-text"><strong>Explanation:</strong> A method is used to group code that performs a specific function, making programs easier to manage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QUESTION 3 -->
+<div class="question-item" id="q3">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 3</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What keyword is used to return a value from a method?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">return</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The return keyword sends a value back to where the method was called.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 4 -->
+<div class="question-item" id="q4">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 4</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Is it acceptable to use descriptive method names like calculateAverage()?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Descriptive names make code easier to understand and maintain.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 5 -->
+<div class="question-item" id="q5">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 5</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What does Arrays.sort() do?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Sorts array elements</p>
+                <p class="explanation-text"><strong>Explanation:</strong> It arranges elements in ascending order automatically.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 6 -->
+<div class="question-item" id="q6">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 6</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Is a return statement required in a non-void method?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Non-void methods must return a value, otherwise an error occurs.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 7 -->
+<div class="question-item" id="q7">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 7</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which best describes a Java method?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">A block of code that performs a specific task</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Methods are designed to do one specific job inside a program.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 8 -->
+<div class="question-item" id="q8">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 8</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Will removing the inner loop still print all elements of a 2D array?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The inner loop is needed to access each element inside rows.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 9 -->
+<div class="question-item" id="q9">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 9</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which loop is commonly used to traverse arrays?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">for</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The for loop is commonly used because it works well with indexes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 10 -->
+<div class="question-item" id="q10">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 10</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Is it better to use methods for repeated code?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Methods avoid repetition and make code cleaner and reusable.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 11 -->
+<div class="question-item" id="q11">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 11</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which of the following is a predefined method?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">length()</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Predefined methods are built into Java, like length() which is used for strings or arrays.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 12 -->
+<div class="question-item" id="q12">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 12</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is the output of Math.sqrt(25)?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">5</p>
+                <p class="explanation-text"><strong>Explanation:</strong> sqrt means square root, and the square root of 25 is 5.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 13 -->
+<div class="question-item" id="q13">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 13</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Can an array size increase dynamically after declaration?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Arrays in Java have fixed sizes. To change size, a new array must be created.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 14 -->
+<div class="question-item" id="q14">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 14</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is the purpose of parameters in a method?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">To accept input values</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Parameters allow methods to receive data from outside.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 15 -->
+<div class="question-item" id="q15">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 15</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is the term for a method already defined in Java libraries?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Predefined Method</p>
+                <p class="explanation-text"><strong>Explanation:</strong> These methods are already available and can be used without creating them.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 16 -->
+<div class="question-item" id="q16">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 16</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">An if statement inside another if statement.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Nested if statement</p>
+                <p class="explanation-text"><strong>Explanation:</strong> It allows checking multiple conditions inside another condition.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 17 -->
+<div class="question-item" id="q17">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 17</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Statement used when condition is false.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">else</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The else block runs when the if condition is not satisfied.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 18 -->
+<div class="question-item" id="q18">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 18</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">A chain of conditions forming a decision tree.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">if-else-if ladder</p>
+                <p class="explanation-text"><strong>Explanation:</strong> It checks multiple conditions one after another.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 19 -->
+<div class="question-item" id="q19">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 19</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Statement used for multiple selections.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">switch statement</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Switch is used when there are many possible choices.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 20 -->
+<div class="question-item" id="q20">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 20</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Keyword that skips current iteration.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">continue</p>
+                <p class="explanation-text"><strong>Explanation:</strong> continue skips the current loop cycle and moves to the next one.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 21 -->
+<div class="question-item" id="q21">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 21</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is required for a loop to continue?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True condition</p>
+                <p class="explanation-text"><strong>Explanation:</strong> A loop keeps running as long as its condition is true.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 22 -->
+<div class="question-item" id="q22">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 22</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What does break do?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Exit loop</p>
+                <p class="explanation-text"><strong>Explanation:</strong> break immediately stops the loop.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 23 -->
+<div class="question-item" id="q23">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 23</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">else block runs when condition is true.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> else runs only when the if condition is false.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 24 -->
+<div class="question-item" id="q24">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 24</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What will happen if an if condition is false?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Executes next line</p>
+                <p class="explanation-text"><strong>Explanation:</strong> If the condition is false, the if block is skipped.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 25 -->
+<div class="question-item" id="q25">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 25</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which is used when multiple conditions are checked sequentially?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">if-else-if</p>
+                <p class="explanation-text"><strong>Explanation:</strong> It allows checking several conditions one by one.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 26 -->
+<div class="question-item" id="q26">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 26</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is the first part of a for loop?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Initialization</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The loop starts by initializing a variable before checking the condition.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 27 -->
+<div class="question-item" id="q27">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 27</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What type of loop is for(;;)?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Infinite</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Without condition, the loop runs forever unless stopped manually.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 28 -->
+<div class="question-item" id="q28">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 28</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What will be the output?</p>
+        <pre>int x = 5;
+if(x > 10){
+System.out.println("Hi");
+}</pre>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">No output</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The condition is false, so the print statement is not executed.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 29 -->
+<div class="question-item" id="q29">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 29</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What will be output?</p>
+        <pre>for(int i=1;i<=3;i++){
+System.out.print(i);
+}</pre>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">123</p>
+                <p class="explanation-text"><strong>Explanation:</strong> The loop runs from 1 to 3 and prints each number consecutively.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 30 -->
+<div class="question-item" id="q30">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 30</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Java executes code randomly.</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Java executes code in a defined order, usually from top to bottom.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 31 -->
+<div class="question-item" id="q31">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 31</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is the purpose of closing input streams?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">To avoid memory leaks</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Closing streams frees system resources and prevents issues.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 32 -->
+<div class="question-item" id="q32">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 32</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Are command-line arguments treated as integers automatically?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> They are strings by default and must be converted manually.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 33 -->
+<div class="question-item" id="q33">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 33</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Can command-line arguments be accessed using index positions?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True</p>
+                <p class="explanation-text"><strong>Explanation:</strong> They are stored in an array like args[0], args[1].</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 34 -->
+<div class="question-item" id="q34">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 34</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which Scanner method allows multiple words input?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">nextLine()</p>
+                <p class="explanation-text"><strong>Explanation:</strong> nextLine() reads the entire line including spaces.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 35 -->
+<div class="question-item" id="q35">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 35</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Does next() read full names with spaces?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> next() stops at spaces, so it cannot read full names.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 36 -->
+<div class="question-item" id="q36">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 36</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Can Scanner methods convert input into proper data types?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Methods like nextInt() and nextDouble() convert input automatically.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 37 -->
+<div class="question-item" id="q37">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 37</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which Java class is most used for input?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Scanner</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Scanner is commonly used for reading user input.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 38 -->
+<div class="question-item" id="q38">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 38</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What Scanner method reads double values?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">nextDouble()</p>
+                <p class="explanation-text"><strong>Explanation:</strong> It reads decimal numbers and converts them into double type.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 39 -->
+<div class="question-item" id="q39">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 39</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Will BufferedReader work without InputStreamReader?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">False</p>
+                <p class="explanation-text"><strong>Explanation:</strong> InputStreamReader is needed to convert input into readable format.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 40 -->
+<div class="question-item" id="q40">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 40</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which command runs a compiled Java program?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">java filename</p>
+                <p class="explanation-text"><strong>Explanation:</strong> After compiling, the java command runs the program.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 41 -->
+<div class="question-item" id="q41">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 41</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which library is required for Console class?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">java.io.Consolelibrary</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Console belongs to the java.io package.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 42 -->
+<div class="question-item" id="q42">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 42</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Is file input still valid input in Java?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">True</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Input can come from files, not just the keyboard.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 43 -->
+<div class="question-item" id="q43">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 43</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What is the term for inputs passed after the program name during execution?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Command-line arguments</p>
+                <p class="explanation-text"><strong>Explanation:</strong> These are values passed when running the program from the command line.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 44 -->
+<div class="question-item" id="q44">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 44</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">What type of input involves storing data in files for later use?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Offline Input</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Offline input refers to data stored and read from files instead of real-time input.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUESTION 45 -->
+<div class="question-item" id="q45">
+    <div class="question-header" onclick="toggleQuestion(this)">
+        <span class="question-number">Question 45</span>
+        <span class="toggle-icon">▼</span>
+    </div>
+    <div class="question-content">
+        <p class="question-text">Which refers to data provided to a computer system for processing?</p>
+        <div class="answer-section">
+            <button class="reveal-btn" onclick="revealAnswer(this)">Reveal Answer</button>
+            <div class="answer-content" style="display: none;">
+                <p class="answer-text">Input</p>
+                <p class="explanation-text"><strong>Explanation:</strong> Input is any data given to a system to be processed.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                    </div><!-- end questions-container -->
+                    <div class="reflection-box">
+                        <h5>🤔 Reflection</h5>
+                        <p>This quiz was more challenging compared to the first one because it covered a wider range of topics and required deeper understanding. It tested not only my knowledge of Java basics but also how well I could apply concepts like methods, loops, conditionals, and input handling. While answering, I realized that I still need to improve in analyzing code and understanding how different parts of a program work together. Some questions were tricky, especially those involving logic and output prediction, but they helped me think more critically. Overall, this quiz helped me identify my strengths and weaknesses, and it motivated me to review and practice more so I can become more confident in writing and understanding Java programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- end item-list -->
+</div><!-- end category-block: quizzes -->
+
+<!-- ============================================================
+     SEATWORK
+     ============================================================ -->
+<div class="category-block">
+    <div class="category-label">
+        <span class="cat-icon"></span>
+        <h2>Midterm Seatwork</h2>
+        <span class="cat-count">3 items</span>
+    </div>
+    <div class="item-list">
+
+
+
+        <!-- Seatwork #1-->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">SEATWORK #1</span>
+                    <h4>Unary Operators (Increment/Decrement and Bitwise)</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation &amp; Reflection</h5>
+                        <p>This seatwork was about tracing how variables change when using increment and decrement operators inside conditional expressions, and honestly it was quite challenging at first because we had to carefully monitor the value of each variable step by step. I learned that the placement of the increment operator really matters, since `a++` uses the current value before increasing it while `++a` increases the value first before it is used, and this small difference can already affect the result of the whole expression. It became even more confusing when we started dealing with short-circuit and non-short-circuit operators, because with `&&`, if the first condition evaluates to false, the second condition is no longer checked, meaning some variables may not be incremented at all, while with `&`, both conditions are always evaluated, so all the increments still happen regardless of the result. Because of this, I had to slow down and carefully trace each line instead of rushing, since one small mistake can lead to a completely different answer. This activity made me realize how important it is to understand how expressions are evaluated in programming and not just rely on intuition. Even though it was confusing at times, it helped me improve my logical thinking, patience, and attention to detail, which are all important skills in coding.
+</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Seatwork #2 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">SEATWORK #2</span>
+                    <h4>Scanner w/ condtionals</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation &amp; Reflection</h5>
+                        <p>
+This activity focused on using the Scanner class in Java to accept user input and compute a student’s grade, then provide a corresponding remark based on the result. We were asked to input values such as the student’s grades, and the program would process these inputs to calculate the average. After computing the grade, the program uses conditional statements to determine the appropriate remark, such as “Passed” or “Failed,” depending on the final score. At first, it was a bit tricky to handle user input correctly and make sure the values were properly used in the computation, but as I continued practicing, I became more comfortable with it. This activity helped me understand how important input handling is in programming, especially when interacting with users. It also improved my understanding of how conditionals work in decision-making within a program. Overall, this task strengthened my skills in both using Scanner and applying logical conditions to produce accurate and meaningful outputs.
+</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Seatwork #3 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">SEATWORK #3</span>
+                    <h4>Student Grade Evaluator</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+
+                    <div class="instruction-box">
+                        <h5>📄 Instructions</h5>
+                        <p>Create a Java program that evaluates a student's final grade using:</p>
+                        <p>• Scanner (for user input)</p>
+                        <p>• User-defined methods</p>
+                        <p>• Control structures (if-else / switch)</p>
+                        <p>• Further instructions can be viewed on the Canvas file page</p>
+                    </div>
+
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span class="code-lang">Java (source code answer)</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="java">import java.util.Scanner;
+
+public class StudentGradeEvaluatorCuison {
+
+    // METHOD 1: Compute Average
+    public static double getAvrg(double prelim, double midterm, double finals) {
+        return (prelim + midterm + finals) / 3;
+    }
+
+    // METHOD 2: Determine Grade Remark
+    public static String getGradeRemark(double average) {
+        if (average >= 90 && average <= 100) {
+            return "Excellent";
+        } else if (average >= 80 && average <= 89) {
+            return "Very Good";
+        } else if (average >= 75 && average <= 79) {
+            return "Good";
+        } else {
+            return "Failed";
+        }
+    }
+
+    // METHOD 3: Validate Grade (0–100 only)
+    public static boolean isValidGrade(double grade) {
+        return grade >= 0 && grade <= 100;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter Student Name: ");
+        String studentName = input.nextLine();
+
+        System.out.print("Enter Prelim Grade: ");
+        double prelim = input.nextDouble();
+
+        System.out.print("Enter Midterm Grade: ");
+        double midterm = input.nextDouble();
+
+        System.out.print("Enter Final Grade: ");
+        double finals = input.nextDouble();
+
+        if (!isValidGrade(prelim) || !isValidGrade(midterm) || !isValidGrade(finals)) {
+            System.out.println("Error: Invalid grade input. Please enter values between 0 and 100.");
+            input.close();
+            return;
+        }
+
+        double average = getAvrg(prelim, midterm, finals);
+        String remark = getGradeRemark(average);
+
+        System.out.println("\n===== GRADE EVALUATION RESULT =====");
+        System.out.println("Student Name : " + studentName);
+        System.out.println("Prelim Grade : " + prelim);
+        System.out.println("Midterm Grade: " + midterm);
+        System.out.println("Final Grade  : " + finals);
+        System.out.printf("Average Grade: %.2f%n", average);
+        System.out.println("Remark       : " + remark);
+        System.out.println("====================================");
+
+        input.close();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="seatwrok3-1.png" alt="Seatwork 3 Output 1" class="content-image">
+                        <img src="seatwork3-2.png" alt="Seatwork 3 Output 2" class="content-image">
+                        <img src="seatwork3-3.png" alt="Seatwork 3 Output 3" class="content-image">
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation &amp; Reflection</h5>
+                        <p>The program basically evaluates a student's performance using three grading periods: prelim, midterm, and final. It first asks for the student's name and grades, then it checks if all the inputs are valid (meaning they must be between 0 and 100). If even one grade is invalid, the program stops and shows an error message to avoid incorrect computation.</p>
+
+<p>After validation, it computes the average using a method that simply adds all three grades and divides by three. Then another method is used to determine the remark based on the average, like "Excellent" if the score is high, or "Failed" if it's low. There is also a separate method that handles validation, which helps keep the code cleaner and easier to understand.</p>
+
+<p>Finally, the program displays all the results in a structured format: the student's name, each grade, the computed average, and the final remark. It feels straightforward overall, but the important part here is how the program separates tasks into methods, which makes it easier to read, debug, and reuse later on.</p>
+
+<p>While working on this program, I realized how important it is to organize code properly using methods. At first, I thought it would be easier to just write everything in the main method, but breaking it into smaller parts made the program much clearer and easier to manage. I also understood the importance of validating input to avoid errors in the output. Overall, this activity helped me improve my logical thinking and gave me a better understanding of how to structure a Java program effectively.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+
+
+
+
+<!-- ============================================================
+     ACTIVITIES
+     ============================================================ -->
+<div class="category-block">
+    <div class="category-label">
+        <span class="cat-icon"></span>
+        <h2>Midterm Activities</h2>
+        <span class="cat-count">5 items</span>
+    </div>
+    <div class="item-list">
+
+        <!-- Activity #1 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">ACTIVITY #1</span>
+                    <h4>Variables &amp; Code Analysis</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+                    <div class="instruction-box">
+                        <h5>📄 Instructions</h5>
+                        <ul>
+                            <li>Carefully analyze the given Java program.</li>
+                            <li>Trace the references and memory changes step-by-step.</li>
+                            <li>Complete all required tables and questions.</li>
+                            <li>Show your logical reasoning where necessary.</li>
+                            <li>Write your answers in a yellow paper (handwritten).</li>
+                            <li>Take a clear photo or scan of your work.</li>
+                            <li>Upload your file in Canvas on or before the deadline.</li>
+                            <li>Submission Format: Section_LastName_FirstName_CodeAnalysisActivity#1.pdf</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-container">
+                        <div class="code-header">
+                            <span class="code-lang">Java</span>
+                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <pre><code class="java">// Please review the code below.
+public class Employee {
+    static int employeeCount = 0;
+    
+    String name;
+    double salary;
+
+    public Employee(String n, double s) {
+        name = n;
+        salary = s;
+        employeeCount++;
+    }
+
+    public void increaseSalary(Employee e) {
+        e.salary = e.salary + 5000;
+        employeeCount = employeeCount + 1;
+    }
+
+    public void display() {
+        System.out.println(name + " " + salary + " " + employeeCount);
+    }
+
+    public static void main(String[] args) {
+        Employee e1 = new Employee("Anna", 20000);
+        Employee e2 = new Employee("Brian", 25000);
+        Employee e3 = e1;
+
+        e3.salary = 22000;
+
+        e2 = e1;
+
+        e1 = null;
+
+        e3.increaseSalary(e2);
+
+        e2 = null;
+
+        e3.display();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="act1-1.png" alt="Activity 1 Answer Part 1" class="content-image">
+                        <img src="act1-2.png" alt="Activity 1 Answer Part 2" class="content-image">
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation</h5>
+                        <p>For Part A, I figured out where each variable is stored based on how it's declared and used. The static variable employeeCount belongs to the class itself, so it's stored in the Method Area and shared by all objects. The instance variables like name and salary are stored in the Heap because they belong to each specific object. Meanwhile, the reference variables such as e1, e2, and e3 are stored in the Stack.</p>
+                        <p>In Part B, I followed what happens step by step as the code runs. When the first Employee object is created, e1 points to a new object in the heap. Then when e3 = e1 is executed, no new object is created — e3 just points to the same object as e1. So when I updated the salary using e3.salary = 22000, the change also appeared when accessing it through e1, since they are pointing to the same object. Later, when e2 = e1 is executed, the original object that e2 was pointing to (the "Brian" object) is no longer referenced by any variable, so it becomes eligible for garbage collection.</p>
+                        <p>For Part C, I focused on the final state of the object referenced by e3. Since e3 still points to the original "Anna" object, I tracked all the changes made to it. The name stayed the same, but the salary was updated from 20000 to 22000, and then increased again to 27000 through a method call. The employeeCount ended up as 3. So in the end, when the display() method was called, it printed: Anna 27000.0 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity #2 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">ACTIVITY #2</span>
+                    <h4>Operators</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+
+                    <div class="instruction-box">
+                        <h5>📄 Main Instructions</h5>
+                        <ul>
+                            <li>Create a Java program based on the questions.</li>
+                            <li>Follow the exact required output shown in the question.</li>
+                            <li>You must use the specific operator required in each number.</li>
+                            <li>Do NOT hardcode the final answers.</li>
+                            <li>Show proper use of variables and correct operator usage.</li>
+                            <li>Follow proper Java syntax, indentation, and naming conventions.</li>
+                            <li>Use System.out.println() for displaying output.</li>
+                            <li>Compile and run your program to verify correctness before submission.</li>
+                            <li>Submission Format: Section_LastName_FirstName_OperatorsActivity#2.pdf</li>
+                        </ul>
+                    </div>
+
+                    <!-- Q1 -->
+                    <div class="sub-activity">
+                        <h5>Question 1</h5>
+                        <p class="sub-question">Create a Java program using bitwise operators that will produce the output: true, 10, false, 15.</p>
+                        <div class="code-container">
+                            <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                            <pre><code class="java">public class BitwiseActivity {
+    public static void main(String[] args) {
+        int a = 10; // 1010 in binary
+        int b = 15; // 1111 in binary
+
+        boolean res1 = (a < b) & true;
+        int res2 = a & b;
+        boolean res3 = (a > b) | false;
+        int res4 = a | b;
+
+        System.out.println(res1 + ", " + res2 + ", " + res3 + ", " + res4);
+    }
+}</code></pre>
+                        </div>
+                        <div class="learning-box">
+                            <h5>💡 Explanation</h5>
+                            <p>This part is about how Java works at the bit level. We start with a = 10 and b = 15, and in binary those are 1010 and 1111. For res1 = (a &lt; b) &amp; true, since 10 is less than 15, the result is true. For res2 = a &amp; b, it compares each bit, and since 1010 matches with parts of 1111, the result is still 1010 or 10. For res3, it checks if 10 is greater than 15, which is false, so false OR false is still false. Then res4 = a | b combines the bits, giving 1111 or 15.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="sub-activity">
+                        <h5>Question 2</h5>
+                        <p class="sub-question">Create a Java program using the ternary operator that will produce the output: true, false, 25, 30.</p>
+                        <div class="code-container">
+                            <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                            <pre><code class="java">public class TernaryActivity {
+    public static void main(String[] args) {
+        int x = 25;
+        int y = 30;
+
+        boolean res1 = (x < y) ? true : false;
+        boolean res2 = (x > y) ? true : false;
+        int res3 = (x < y) ? x : y;
+        int res4 = (x < y) ? y : x;
+
+        System.out.println(res1 + ", " + res2 + ", " + res3 + ", " + res4);
+    }
+}</code></pre>
+                        </div>
+                        <div class="learning-box">
+                            <h5>💡 Explanation</h5>
+                            <p>The ternary operator is basically a shortcut for if-else. For res1, it checks if 25 is less than 30, which is true. For res2, it checks if 25 is greater than 30, which is false. Then res3 returns the smaller value (25), while res4 returns the larger value (30). This part was easier to follow compared to the bitwise activity.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="sub-activity">
+                        <h5>Question 3</h5>
+                        <p class="sub-question">Create a Java program using assignment operators that will produce the output: Addition: 120, Subtraction: 70, Multiplication: 144, Division: 16.</p>
+                        <div class="code-container">
+                            <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                            <pre><code class="java">public class AssignmentActivity {
+    public static void main(String[] args) {
+        int add = 95;
+        int sub = 95;
+        int mul = 12;
+        int div = 48;
+
+        add += 25;  // add = 120
+        sub -= 25;  // sub = 70
+        mul *= 12;  // mul = 144
+        div /= 3;   // div = 16
+
+        System.out.println("Addition: " + add + ", Subtraction: " + sub + 
+                           ", Multiplication: " + mul + ", Division: " + div);
+    }
+}</code></pre>
+                        </div>
+                        <div class="learning-box">
+                            <h5>💡 Explanation</h5>
+                            <p>This section focuses on assignment operators, which update values directly. For example, add += 25 takes 95 and adds 25, making it 120. Then sub -= 25 results in 70. mul *= 12 multiplies 12 by 12 to get 144, and div /= 3 divides 48 by 3 to get 16. These are just shorter ways of writing operations, and they make the code look cleaner.</p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="sub-activity">
+                        <h5>Question 4</h5>
+                        <p class="sub-question">Create a Java program using arithmetic, relational, logical, and unary operators that will produce the output: FALSE, TRUE, TRUE, 40, TRUE, FALSE, FALSE, 80.</p>
+                        <div class="code-container">
+                            <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                            <pre><code class="java">public class MixedOperatorsActivity {
+    public static void main(String[] args) {
+        int n = 40;
+        int m = 80;
+
+        String b1 = Boolean.toString((n > m) && true).toUpperCase();
+        String b2 = Boolean.toString((n < m) || false).toUpperCase();
+        String b3 = Boolean.toString(!(n == m)).toUpperCase();
+        int val1 = n++;
+        String b4 = Boolean.toString((n != m) ^ false).toUpperCase();
+        String b5 = Boolean.toString((n > m) && (n > 0)).toUpperCase();
+        String b6 = Boolean.toString(!true).toUpperCase();
+        int val2 = m;
+
+        System.out.println(b1 + ", " + b2 + ", " + b3 + ", " + val1 + ", " + 
+                           b4 + ", " + b5 + ", " + b6 + ", " + val2);
+    }
+}</code></pre>
+                        </div>
+                        <div class="learning-box">
+                            <h5>💡 Explanation</h5>
+                            <p>This part combines different concepts. For b1 and b2, it uses logical AND and OR. Since 40 is not greater than 80, b1 is false, but since 40 is less than 80, b2 is true. Then b3 = !(n == m) checks if 40 equals 80, which is false, and the ! makes it true. The val1 = n++ part uses the value first before increasing it (post-increment). For b4, it uses XOR, and since true XOR false is true, the result is true. b6 = !true is just false. Lastly, .toUpperCase() is used to format the output. This section helped me understand how different operators work together.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity #3 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">ACTIVITY #3</span>
+                    <h4>Basic ATM System</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+                    <div class="instruction-box">
+                        <h5>📄 Instructions</h5>
+                        <ul>
+                            <li>Create a Java program named BasicATMSystemLastName.</li>
+                            <li>Use the Scanner class to accept user input.</li>
+                            <li>Assume the initial balance is 5,000 pesos.</li>
+                            <li>Use a switch statement to process the selected option.</li>
+                            <li>Use if–else statements to validate withdrawal.</li>
+                            <li>Maximum withdrawal per transaction: 2,000 pesos.</li>
+                            <li>The program must repeat using a do-while loop until the user selects Exit.</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-container">
+                        <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                        <pre><code class="java">import java.util.Scanner;
+
+class BasicATMSystemCuison {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        double balance = 5000;
+        int choice;
+
+        do {
+            System.out.println("\n===== ATM MENU =====");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            choice = input.nextInt();
+
+            switch(choice){
+                case 1:
+                    System.out.println("Your current balance is: " + balance);
+                    break;
+                case 2:
+                    System.out.print("Enter amount to deposit: ");
+                    double deposit = input.nextDouble();
+                    balance = balance + deposit;
+                    System.out.println("Deposit successful.");
+                    break;
+                case 3:
+                    System.out.print("Enter amount to withdraw: ");
+                    double withdraw = input.nextDouble();
+                    if(withdraw > 2000){
+                        System.out.println("Withdrawal exceeds the maximum limit of 2000 pesos.");
+                    } else if(withdraw > balance){
+                        System.out.println("Insufficient balance.");
+                    } else{
+                        balance = balance - withdraw;
+                        System.out.println("Withdrawal successful.");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Thank you for using the ATM system.");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while(choice != 4);
+
+        input.close();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation</h5>
+                        <p>This program simulates a simple ATM system using Java. It used the Scanner class to accept user input and started with an initial balance of 5000 pesos. The program ran inside a do-while loop, which meant the menu kept appearing until the user chose to exit. The switch statement handled each option cleanly, and the withdrawal section used nested if-else statements to validate both the withdrawal limit and the available balance.</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h5>🤔 Reflection</h5>
+                        <p>This activity was not too hard, but I did encounter some small challenges. I got a bit confused with the withdrawal conditions at first, especially checking both the limit and the balance, but I fixed it by arranging the conditions properly. I also had to understand how the loop should stop, and using the do-while with choice != 4 helped. Overall, it became easier after testing and correcting mistakes, and it helped me better understand how loops, conditions, and input work together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity #4 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">ACTIVITY #4</span>
+                    <h4>Student Enrollment Assessment System</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+                    <div class="instruction-box">
+                        <h5>📄 Instructions</h5>
+                        <ul>
+                            <li>Create a Java program named EnrollmentAssessmentSystemLastName.</li>
+                            <li>Import and use the Scanner class to accept user input.</li>
+                            <li>Ask the user to input: Student Name, Senior High School Strand (STEM, ABM, HUMSS, TVL, Others), Entrance Exam Score (0–100), Interview Score (0–100), First Screening Result (Pass/Fail).</li>
+                            <li>Compute FinalScore = (EntranceExam × 0.60) + (InterviewScore × 0.40)</li>
+                            <li>Use nested if to determine admission: Pass + ≥85 → Scholarship; ≥75 → Admitted; ≥65 → Waitlisted; else → Not Qualified. Fail → Not Qualified.</li>
+                            <li>Use switch to determine Program Recommendation based on strand.</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-container">
+                        <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                        <pre><code class="java">import java.util.Scanner;
+
+class EnrollmentAssessmentSystemCuison {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\n========= WELCOME ===========");
+        System.out.print("Enter Student Name: ");
+        String studentName = input.nextLine();
+
+        System.out.print("Enter Senior High Strand (STEM, ABM, HUMSS, TVL, Others): ");
+        String strand = input.nextLine();
+
+        System.out.print("Enter Entrance Exam Score (0-100): ");
+        double examScore = input.nextDouble();
+
+        System.out.print("Enter Interview Score (0-100): ");
+        double interviewScore = input.nextDouble();
+
+        input.nextLine();
+
+        System.out.print("Enter First Screening Result (Pass/Fail): ");
+        String screening = input.nextLine();
+
+        double finalScore = (examScore * 0.6) + (interviewScore * 0.4);
+        String admissionResult;
+
+        if(screening.equalsIgnoreCase("Pass")){
+            if(finalScore >= 85)      admissionResult = "Admitted with Scholarship";
+            else if(finalScore >= 75) admissionResult = "Admitted";
+            else if(finalScore >= 65) admissionResult = "Waitlisted";
+            else                      admissionResult = "Not Qualified due to not meeting the minimum final score";
+        } else {
+            admissionResult = "Not Qualified due to failing the first screening";
+        }
+
+        String program;
+        switch(strand.toUpperCase()){
+            case "STEM":  program = "BSIT / BSCS"; break;
+            case "ABM":   program = "BSBA"; break;
+            case "HUMSS": program = "BSED / AB Communication"; break;
+            case "TVL":   program = "BSIT"; break;
+            default:      program = "General Program";
+        }
+
+        System.out.println("\n===== ENROLLMENT RESULT =====");
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Strand: " + strand);
+        System.out.println("Entrance Exam Score: " + examScore);
+        System.out.println("Interview Score: " + interviewScore);
+        System.out.println("Final Score: " + finalScore);
+        System.out.println("\nAdmission Result: " + admissionResult);
+        System.out.println("Recommended Program: " + program);
+
+        input.close();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation</h5>
+                        <p>This program evaluates a student's admission status based on their inputs. It started by using the Scanner class to collect information such as the student's name, strand, exam score, interview score, and screening result. After gathering the data, the program calculated the final score using the formula: 60% from the exam and 40% from the interview. The program then used a nested if statement to determine the admission result, and a switch statement to recommend a program based on the student's strand — converting to uppercase to make matching easier.</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h5>🤔 Reflection</h5>
+                        <p>This activity was a bit more challenging compared to the previous one because of the nested conditions. I had to be careful with the order of the if-else statements to make sure the correct admission result was given. I also encountered a small issue with input skipping, but I solved it by adding nextLine() after nextDouble(). Overall, it helped me understand how to combine input, computation, and decision-making in one program.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity #5 -->
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">ACTIVITY #5</span>
+                    <h4>Personal Expense Tracker</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+                    <div class="instruction-box">
+                        <h5>📄 Instructions</h5>
+                        <ul>
+                            <li>Create a Java program named ExpenseTrackerLastName.</li>
+                            <li>Implement the following methods: a void method for the title, a non-void method to calculate total expenses, a non-void method to check if total exceeds budget, and a void method to display results.</li>
+                            <li>In the main method, call all methods and display final output clearly.</li>
+                            <li>Add at least TWO enhancements: accept user input, add another expense category, compute remaining budget, or display a personalized message.</li>
+                            <li>Ensure the program compiles without errors and produces correct output.</li>
+                        </ul>
+                    </div>
+
+                    <div class="code-container">
+                        <div class="code-header"><span class="code-lang">Java</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                        <pre><code class="java">import java.util.Scanner;
+
+public class ExpenseTrackerCuison {
+
+    public static void displayTitle() {
+        System.out.println("=================================");
+        System.out.println("      PERSONAL EXPENSE TRACKER   ");
+        System.out.println("=================================");
+    }
+
+    public static double computeTotal(double mealCost, double fareCost, double miscCost) {
+        return mealCost + fareCost + miscCost;
+    }
+
+    public static String evaluateBudget(double totalSpent, double maxBudget) {
+        if (totalSpent > maxBudget) {
+            return "You exceeded your budget!";
+        } else {
+            return "You are within your budget.";
+        }
+    }
+
+    // Enhancement: compute remaining balance
+    public static double calculateBalance(double totalSpent, double maxBudget) {
+        return maxBudget - totalSpent;
+    }
+
+    public static void showSummary(double totalSpent, String budgetRemark) {
+        System.out.println("\n------ EXPENSE SUMMARY ------");
+        System.out.println("Total Expenses: " + totalSpent);
+        System.out.println("Status: " + budgetRemark);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        displayTitle();
+
+        System.out.print("Enter your budget: ");
+        double maxBudget = input.nextDouble();
+
+        System.out.print("Enter food expenses: ");
+        double mealCost = input.nextDouble();
+
+        System.out.print("Enter transportation expenses: ");
+        double fareCost = input.nextDouble();
+
+        System.out.print("Enter other expenses: ");
+        double miscCost = input.nextDouble();
+
+        // Enhancement: extra category
+        System.out.print("Enter entertainment expenses: ");
+        double leisureCost = input.nextDouble();
+
+        double baseTotal  = computeTotal(mealCost, fareCost, miscCost);
+        double totalSpent = baseTotal + leisureCost;
+
+        String budgetRemark = evaluateBudget(totalSpent, maxBudget);
+        double balanceLeft  = calculateBalance(totalSpent, maxBudget);
+
+        showSummary(totalSpent, budgetRemark);
+
+        System.out.println("Remaining Budget: " + balanceLeft);
+
+        if (balanceLeft > 0) {
+            System.out.println("Nice! You managed your money well.");
+        } else {
+            System.out.println("Be careful! You went over your budget.");
+        }
+
+        input.close();
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="learning-box">
+                        <h5>💡 Explanation</h5>
+                        <p>This program was created to track a user's expenses and check if they stayed within their budget. It used the Scanner class to accept user input, such as the budget and different types of expenses. The program was divided into methods, which made the code more organized and easier to understand. An additional expense for entertainment was also included as an enhancement. The evaluateBudget() method checked whether total expenses exceeded the budget, while calculateBalance() computed the remaining budget.</p>
+                    </div>
+
+                    <div class="reflection-box">
+                        <h5>🤔 Reflection</h5>
+                        <p>This activity was a bit challenging at first, especially when organizing the methods and making sure each one had a clear purpose. I also had to think about how to connect the methods properly in the main method. One small issue I encountered was making sure the total calculation was correct after adding the extra expense. Overall, it helped me understand how methods make programs cleaner and more structured.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">REFLECTIONS</span>
+                    <h4>For activities 1-5 </h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="reflection-box">
+                        <h5>🤔 Reflection</h5>
+                        <p>This set of activities really helped me see how everything we have learned in Java connects together. At first, the tasks felt separate, like variables, operators, and control structures, but as I worked through each activity, I realized they all build on each other. For example, understanding how variables and memory work in Activity 1 made it easier to follow how data changes in later programs like the ATM system and enrollment assessment.
+
+Some parts were honestly challenging, especially when dealing with multiple conditions and making sure the logic flows correctly, like in the enrollment system. I also had small struggles with input handling and making sure the program runs smoothly without errors. But through trial and error, testing, and fixing mistakes, I became more confident in writing and understanding Java code.
+
+What I appreciate the most is how these activities became more realistic over time. Programs like the ATM system and expense tracker made me feel like I was building something practical, not just answering questions. It showed me how programming can be used to solve real life problems.
+
+Overall, these activities improved my problem solving skills, logical thinking, and understanding of how Java works as a whole. I can say that I am more comfortable now with combining different concepts, and I feel more prepared for more complex programming tasks in the future.
+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- ============================================================
+     ASSIGNMENT
+     ============================================================ -->
+<div class="category-block">
+    <div class="category-label">
+        <span class="cat-icon"></span>
+        <h2>Midterm Assignment</h2>
+        <span class="cat-count">1 item</span>
+    </div>
+    <div class="item-list">
+
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">ASSIGNMENT #1</span>
+                    <h4>Introduction to Java</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/30</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+                    <div class="instruction-box">
+                        <h5>📄 Instructions &amp; Questions</h5>
+                        <ul>
+                            <li>What is Java programming language? Discuss its key features and advantages.</li>
+                            <li>Explain the concept of platform independence in Java. How does Java achieve platform independence?</li>
+                            <li>Discuss the main components of a Java program and their roles.</li>
+                            <li>What are the differences between JDK, JRE, and JVM in Java?</li>
+                            <li>Explain the difference between interpreted and compiled languages. Is Java an interpreted or compiled language?</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="assignment1-1.jpg" alt="Assignment 1 Part 1" class="content-image">
+                        <img src="assignment1-2.jpg" alt="Assignment 1 Part 2" class="content-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ============================================================
+     Exam
+     ============================================================ -->
+<div class="category-block">
+    <div class="category-label">
+        <span class="cat-icon"></span>
+        <h2>Midterm Exam</h2>
+        <span class="cat-count">1 item</span>
+    </div>
+    <div class="item-list">
+
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">Exam</span>
+                    <h4>Object-Oriented Programming</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">__/100</span>
+                        </div>
+                        <p class="score-note">not graded yet</p>
+                    </div>
+                    <div class="learning-box">
+                        <h5>💡 Explanation &amp; Reflection</h5>
+                        <p>
+Our midterm exam in Object-Oriented Programming (OOP) covered both theoretical and practical aspects of the subject, including modified true or false, multiple choice, and a coding part. The topics included introduction to programming concepts, program structure, variables, data types, identifiers, basic memory concepts, operators, control flow, input and output using Scanner, BufferedReader, Console, and System.in/out, as well as methods and fundamental OOP concepts. The questions tested not only our understanding of definitions but also our ability to analyze code and apply concepts in different situations. The coding part required us to write and complete programs, which challenged our logic and accuracy. For me, the exam was not that hard because I reviewed the topics beforehand, which helped me recall the concepts more easily during the test. However, I still needed to stay careful, especially in questions involving logic and code tracing, since small mistakes can lead to wrong answers. Overall, the exam helped reinforce my understanding of OOP fundamentals and showed me the importance of preparation, practice, and attention to detail when solving programming problems.
+</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ============================================================
+     EXTRA ACTIVITY
+     ============================================================ -->
+<div class="category-block">
+    <div class="category-label">
+        <span class="cat-icon"></span>
+        <h2>Extra Activity</h2>
+        <span class="cat-count">1 item</span>
+    </div>
+    <div class="item-list">
+
+        <div class="item-card">
+            <div class="item-card-header" onclick="toggleItem(this.querySelector('.view-btn'))">
+                <div class="item-card-title">
+                    <span class="item-num">EXTRA #1</span>
+                    <h4>About Me</h4>
+                </div>
+                <button class="view-btn" onclick="event.stopPropagation(); toggleItem(this)">View <span class="btn-arrow">▼</span></button>
+            </div>
+            <div class="item-card-body">
+                <div class="item-card-inner">
+                    <div class="score-display">
+                        <div class="score-box">
+                            <span class="score-label">Score:</span>
+                            <span class="score-value">30/30</span>
+                        </div>
+                        <p class="score-note">Graded</p>
+                    </div>
+                    <div class="about-me-section">
+                        <div class="about-content">
+                            <div class="profile-container">
+                                <img src="Cuison_OOP_AboutMe.jpg" alt="Alexander Dan E. Cuison" class="profile-image">
+                            </div>
+                            <div class="about-text">
+                                <p>Hello! I'm Alexander Dan E. Cuison, a first-year BSIT student at Polytechnic University of the Philippines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div><!-- end container -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Alexander Dan E. Cuison | Object-Oriented Programming E-Portfolio</p>
+        <p class="footer-code">Built with &lt;/&gt; and ☕</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP E-Portfolio | Alexander Dan E. Cuison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="grid-background"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">OOP_Portfolio</span>
+            <span class="logo-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html"   class="nav-link active">home()</a></li>
+            <li><a href="midterm.html" class="nav-link">midterm()</a></li>
+            <li><a href="finals.html"  class="nav-link">finals()</a></li>
+            <li><a href="contact.html" class="nav-link">contact()</a></li>
+        </ul>
+        <div class="menu-toggle"><span></span><span></span><span></span></div>
+    </div>
+</nav>
+
+<!-- HOME HERO -->
+<section id="home" class="section">
+<div class="container">
+<div class="hero">
+<div class="terminal-window">
+    <div class="terminal-header">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">student@oop:~</span>
+    </div>
+    <div class="terminal-body">
+        <div class="terminal-line">
+            <span class="prompt">$</span> <span class="command">whoami.java</span>
+        </div>
+        <div class="terminal-output">
+            <h1 class="glitch" data-text="Alexander Dan E. Cuison">Alexander Dan E. Cuison</h1>
+        </div>
+        <div class="terminal-line">
+            <span class="prompt">$</span> <span class="command">cat about_me.txt</span>
+        </div>
+        <div class="terminal-output">
+            <p class="typing-text">Course: <span class="highlight">COMP 009 | Object Oriented Programming</span></p>
+            <p class="typing-text">School: <span class="highlight">Polytechnic University of the Philippines</span></p>
+            <p class="typing-text">Section: <span class="highlight">BSIT 2-5</span></p>
+        </div>
+        <div class="terminal-line">
+            <span class="prompt">$</span> <span class="command">cat introduction.md</span>
+        </div>
+        <div class="terminal-output intro-text">
+            <p>
+                This e-portfolio presents my Midterm Project in Object-Oriented Programming using VSCode.
+                It includes quizzes, seatworks, activities, and exams that demonstrate my understanding of OOP concepts.
+            </p>
+            <p>
+                Throughout this portfolio, I used HTML, CSS, and JavaScript to showcase my midterm activities, assignments, quizzes, and seatworks. It also includes my understanding and reflections on the given topics under Java OOP, helping me demonstrate how I learned and applied object-oriented programming concepts. This will be uploaded to GitHub as required by the instructions.
+            </p>
+        </div>
+        <div class="terminal-line cursor-blink">
+            <span class="prompt">$</span> <span class="cursor">█</span>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Portfolio Stats -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <span class="stat-number">2</span>
+        <div class="stat-label"> Quizzes</div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">1</span>
+        <div class="stat-label"> Seatworks</div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">5</span>
+        <div class="stat-label"> Activities</div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">1</span>
+        <div class="stat-label"> Assignments</div>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">1</span>
+        <div class="stat-label"> Extra Activity</div>
+    </div>
+</div>
+
+<!-- About This Portfolio -->
+<div class="about-portfolio-card fade-in">
+    <h3>📖 About This Portfolio</h3>
+    <p>
+        Welcome to my OOP E-Portfolio for COMP 009 – Object Oriented Programming at Polytechnic University of the Philippines.
+        This portfolio is organized into dedicated pages for each grading period, making it easy to navigate and review all submitted work.
+    </p>
+    <p>
+        Each entry includes the original instructions, my code solution with syntax highlighting, screenshots of the output, a detailed explanation of how the program works, and a personal reflection. All content is presented as-is, reflecting my learning journey throughout the course.
+    </p>
+    <p>
+        The portfolio is structured using HTML, CSS, and JavaScript — demonstrating not only my OOP skills in Java, but also my ability to present technical work in a clear, professional format.
+    </p>
+</div>
+
+<!-- Navigation Cards -->
+<h2 class="section-title" style="margin-top:4rem;">
+    <span class="title-bracket">&lt;</span> Explore <span class="title-bracket">/&gt;</span>
+</h2>
+<div class="nav-cards">
+    <a href="midterm.html" class="nav-card">
+        <span class="nav-card-icon"></span>
+        <h3>Midterm</h3>
+        <p>Quizzes, seatworks, activities, assignment, and extra activity for the midterm period.</p>
+        <span class="nav-card-badge">2 Quizzes · 1 Seatwork · 5 Activities</span>
+    </a>
+    <a href="finals.html" class="nav-card coming-soon-card">
+        <span class="nav-card-icon"></span>
+        <h3>Finals</h3>
+        <p>Quizzes, seatworks, activities, assignment, and extra activity for the final period.</p>
+        <span class="nav-card-badge">Coming Soon</span>
+    </a>
+    <a href="contact.html" class="nav-card">
+        <span class="nav-card-icon"></span>
+        <h3>Contact</h3>
+        <p>Get in touch — find my email, GitHub, and LinkedIn profile links.</p>
+        <span class="nav-card-badge">Connect</span>
+    </a>
+</div>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Alexander Dan E. Cuison | Object-Oriented Programming E-Portfolio</p>
+        <p class="footer-code">Built with &lt;/&gt; and ☕</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
